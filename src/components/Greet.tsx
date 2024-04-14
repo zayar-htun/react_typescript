@@ -1,9 +1,11 @@
-import React from 'react'
+type GreetProps = {
+    name: string;
+};
 
-export default function Greet() {
-  return (
-    <div>
-        <h1>Welcome Zayar! You have 10 unread messages.....</h1>
-    </div>
-  )
+export default function Greet(props:GreetProps) {
+    return (
+        <div>
+            <h1>Welcome {props.name}! You have 10 unread messages.....</h1>
+        </div>
+    );
 }
