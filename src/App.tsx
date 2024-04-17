@@ -8,6 +8,7 @@ import Oscar from "./components/Oscar";
 import Person from "./components/Person";
 import PersonList from "./components/PersonList";
 import IsLogined from "./components/state/IsLogined";
+import User from "./components/state/User";
 import Status from "./components/Status";
 
 function App() {
@@ -39,7 +40,8 @@ function App() {
             {/* <Container
                 styles={{ border: "1px solid black", padding: "1rem" }}
             /> */}
-            <IsLogined />
+            {/* <IsLogined /> */}
+            <User />
         </div>
     );
 }
