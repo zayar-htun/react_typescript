@@ -6,7 +6,8 @@ type AuthUser = {
 };
 
 export default function User() {
-    const [user, setUser] = useState<AuthUser | null>(null); // null ကြီးပဲဆို error တက်မှာစိုးလို့ authuser မဟုတ်ရင် null 
+    // const [user, setUser] = useState<AuthUser | null>(null); // null ကြီးပဲဆို error တက်မှာစိုးလို့ authuser မဟုတ်ရင် null .... အဲ့လိုမဟုတ်ရင်အောက်ကလိုရေး
+    const [user, setUser] = useState<AuthUser>({} as AuthUser); 
     const handleLogin = () => {
         setUser({
             name: "Zayar",
@@ -20,8 +21,8 @@ export default function User() {
         <div>
             <button onClick={handleLogin}>Login</button>
             <button onClick={handleLogout}>Logout</button>
-            <div>User name is {user?.name}</div>
-            <div>User email is {user?.email}</div>
+            <div>User name is {user.name}</div>
+            <div>User email is {user.email}</div>
         </div>
     );
 }
