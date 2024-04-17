@@ -1,6 +1,8 @@
 import "./App.css";
+import Button from "./components/Button";
 import Greet from "./components/Greet";
 import Heading from "./components/Heading";
+import Input from "./components/Input";
 import Oscar from "./components/Oscar";
 import Person from "./components/Person";
 import PersonList from "./components/PersonList";
@@ -19,12 +21,19 @@ function App() {
     ];
     return (
         <div className="App">
-            <Greet name={"Zayyare"}  isLoggedIn={true} />
+            {/* <Greet name={"Zayyare"}  isLoggedIn={true} />
             <Person name={personName} />
             <PersonList nameArray={personList} />
             <Status status={"error"}/> 
             <Heading>PlaceHolder Text</Heading>
-            <Oscar><Heading>Oscar winner - Dani Daniels</Heading></Oscar>
+            <Oscar><Heading>Oscar winner - Dani Daniels</Heading></Oscar> */}
+
+            <Button
+                handleClick={(event, id) => {
+                    console.log("Button Click", event);
+                }}
+            />
+            <Input value="" handleChange={event => console.log(event)} />
         </div>
     );
 }
